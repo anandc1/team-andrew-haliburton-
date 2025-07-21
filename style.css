@@ -647,6 +647,8 @@ section {
 
 .bio-content {
     text-align: left;
+    position: relative;
+    z-index: 2;
 }
 
 .bio-description {
@@ -654,6 +656,45 @@ section {
     margin-bottom: 20px;
     line-height: 1.7;
     font-style: italic;
+    position: relative;
+}
+
+/* Unique background patterns for each bio */
+.bio-anand .bio-content::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 60px;
+    height: 60px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='2' fill='%236366f1' opacity='0.3'/%3E%3C/svg%3E");
+    background-size: 20px 20px;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.bio-harsh .bio-content::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 80px;
+    height: 80px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,10 90,90 10,90' fill='%23ec4899' opacity='0.2'/%3E%3C/svg%3E");
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.bio-krish .bio-content::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 70px;
+    height: 70px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='20' y='20' width='60' height='60' fill='%2306b6d4' opacity='0.2'/%3E%3C/svg%3E");
+    opacity: 0.4;
+    z-index: -1;
 }
 
 .bio-quote {
@@ -676,17 +717,259 @@ section {
     opacity: 0.7;
 }
 
-/* Individual bio styling */
+/* Individual bio styling - Unique themes for each member */
+
+/* Anand - Full Stack Developer - Purple/Blue theme */
 .bio-anand {
     border-left: 4px solid #6366f1;
+    background: linear-gradient(135deg, var(--bg-tertiary) 0%, rgba(99, 102, 241, 0.05) 100%);
+    position: relative;
+    overflow: hidden;
 }
 
+.bio-anand::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+    animation: float 8s ease-in-out infinite;
+}
+
+.bio-anand .bio-image img {
+    border: 4px solid #6366f1;
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+}
+
+.bio-anand .bio-quote {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border-left: 4px solid #ffffff;
+}
+
+.bio-anand .skill-tag {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+/* Harsh - Design Lead - Pink/Purple theme */
 .bio-harsh {
-    border-left: 4px solid #8b5cf6;
+    border-left: 4px solid #ec4899;
+    background: linear-gradient(135deg, var(--bg-tertiary) 0%, rgba(236, 72, 153, 0.05) 100%);
+    position: relative;
 }
 
+.bio-harsh::after {
+    content: '🎨';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    opacity: 0.3;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.bio-harsh .bio-image img {
+    border: 4px solid #ec4899;
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.3);
+}
+
+.bio-harsh .bio-quote {
+    background: linear-gradient(135deg, #ec4899, #8b5cf6);
+    border-left: 4px solid #ffffff;
+}
+
+.bio-harsh .skill-tag {
+    background: linear-gradient(135deg, #ec4899, #8b5cf6);
+    border: 1px solid rgba(236, 72, 153, 0.3);
+}
+
+/* Krish - Backend Architect - Cyan/Blue theme */
 .bio-krish {
     border-left: 4px solid #06b6d4;
+    background: linear-gradient(135deg, var(--bg-tertiary) 0%, rgba(6, 182, 212, 0.05) 100%);
+    position: relative;
+}
+
+.bio-krish::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #06b6d4, #3b82f6, #06b6d4);
+    animation: slide 3s ease-in-out infinite;
+}
+
+.bio-krish .bio-image img {
+    border: 4px solid #06b6d4;
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+}
+
+.bio-krish .bio-quote {
+    background: linear-gradient(135deg, #06b6d4, #3b82f6);
+    border-left: 4px solid #ffffff;
+}
+
+.bio-krish .skill-tag {
+    background: linear-gradient(135deg, #06b6d4, #3b82f6);
+    border: 1px solid rgba(6, 182, 212, 0.3);
+}
+
+/* Hover effects for each bio */
+.bio-anand:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+}
+
+.bio-harsh:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(236, 72, 153, 0.2);
+}
+
+.bio-krish:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(6, 182, 212, 0.2);
+}
+
+/* Role-specific icons in bio headers */
+.bio-anand h3::before {
+    content: '⚡';
+    margin-right: 8px;
+    font-size: 0.8em;
+}
+
+.bio-harsh h3::before {
+    content: '🎨';
+    margin-right: 8px;
+    font-size: 0.8em;
+}
+
+.bio-krish h3::before {
+    content: '⚙️';
+    margin-right: 8px;
+    font-size: 0.8em;
+}
+
+/* Personal Moodboards within Bios */
+.personal-moodboard {
+    margin: 25px 0;
+    padding: 20px;
+    background: var(--bg-secondary);
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+}
+
+.moodboard-title {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.personal-moodboard .moodboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.personal-moodboard .moodboard-item {
+    background: var(--bg-tertiary);
+    padding: 10px 8px;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    font-size: 0.8rem;
+}
+
+.personal-moodboard .moodboard-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.personal-moodboard .moodboard-item i {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.personal-moodboard .moodboard-item span {
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.personal-moodboard .moodboard-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.personal-moodboard .moodboard-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: var(--bg-tertiary);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    font-size: 0.8rem;
+}
+
+.personal-moodboard .moodboard-link:hover {
+    transform: translateX(3px);
+    box-shadow: var(--shadow);
+}
+
+.personal-moodboard .moodboard-link i {
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
+/* Individual moodboard styling for each member */
+.bio-anand .personal-moodboard {
+    border-left: 3px solid #6366f1;
+}
+
+.bio-anand .personal-moodboard .moodboard-item:hover {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: #ffffff;
+}
+
+.bio-harsh .personal-moodboard {
+    border-left: 3px solid #ec4899;
+}
+
+.bio-harsh .personal-moodboard .moodboard-item:hover {
+    background: linear-gradient(135deg, #ec4899, #8b5cf6);
+    color: #ffffff;
+}
+
+.bio-krish .personal-moodboard {
+    border-left: 3px solid #06b6d4;
+}
+
+.bio-krish .personal-moodboard .moodboard-item:hover {
+    background: linear-gradient(135deg, #06b6d4, #3b82f6);
+    color: #ffffff;
+}
+
+/* Additional animations */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.1); opacity: 0.6; }
+}
+
+@keyframes slide {
+    0% { transform: translateX(-100%); }
+    50% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
 }
 
 .bio:hover {
@@ -970,77 +1253,7 @@ section {
     box-shadow: var(--shadow);
 }
 
-/* Footer */
-.footer {
-    background: var(--bg-tertiary);
-    border-top: 1px solid var(--border-color);
-    padding: 60px 0 20px;
-}
 
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    margin-bottom: 40px;
-}
-
-.footer-section h3,
-.footer-section h4 {
-    margin-bottom: 20px;
-    color: var(--text-primary);
-}
-
-.footer-section p {
-    color: var(--text-secondary);
-    line-height: 1.6;
-}
-
-.footer-section ul {
-    list-style: none;
-}
-
-.footer-section ul li {
-    margin-bottom: 10px;
-}
-
-.footer-section ul li a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-section ul li a:hover {
-    color: var(--primary-color);
-}
-
-.footer-section .social-links {
-    display: flex;
-    gap: 15px;
-}
-
-.footer-section .social-links a {
-    width: 40px;
-    height: 40px;
-    background: var(--gradient);
-    color: #ffffff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-
-.footer-section .social-links a:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow);
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid var(--border-color);
-    color: var(--text-secondary);
-}
 
 /* Animations */
 @keyframes fadeInUp {
