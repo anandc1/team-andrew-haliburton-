@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Andrew Haliburton</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logo.png" alt="Team Logo" class="logo">
+                <span>Team Andrew Haliburton</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#mission" class="nav-link">Mission</a></li>
+                <li><a href="#moodboard" class="nav-link">Moodboard</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="images/logo.png" alt="Team Logo" class="hero-logo-img" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'background: var(--gradient); width: 120px; height: 120px; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: bold; box-shadow: 0 20px 40px rgba(0,0,0,0.3); border: 4px solid rgba(255,255,255,0.2);\'>🏀</div>'">
+            </div>
+            <h1 class="hero-title">Team Andrew Haliburton</h1>
+            <p class="hero-subtitle">Building the future, one line of code at a time</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="15">0</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="1000">0</span>
+                    <span class="stat-label">Hours</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="3">0</span>
+                    <span class="stat-label">Developers</span>
+                </div>
+            </div>
+            <a href="#team" class="cta-button">Meet Our Team</a>
+        </div>
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape"></div>
+                <div class="shape"></div>
+                <div class="shape"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mission" class="mission">
+        <div class="container">
+            <h2 class="section-title">Our Mission & Vision</h2>
+            
+            <!-- Mission Statement -->
+            <div class="mission-statement">
+                <h3 class="mission-heading">🏀 Our Identity</h3>
+                <p class="mission-text">
+                    We are <strong>Team Andrew Haliburton</strong>—a dynamic trio of computer scientists united by our passion for innovation, 
+                    precision, and the relentless pursuit of excellence. Just as Tyrese Haliburton orchestrates plays with vision and creativity, 
+                    we approach every coding challenge with strategic thinking and collaborative energy.
+                </p>
+                <p class="mission-text">
+                    Our strength lies in our diverse expertise: from elegant frontend architectures to robust backend systems, 
+                    we transform complex problems into elegant solutions. We believe that great code, like great basketball, 
+                    requires both individual brilliance and seamless teamwork.
+                </p>
+            </div>
+
+            <!-- Team Values -->
+            <div class="values-section">
+                <h3 class="section-subtitle">💪 Our Core Values</h3>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <i class="fas fa-basketball-ball"></i>
+                        <h3>Respect & Collaboration</h3>
+                        <p>Every voice matters. We listen, learn, and lift each other up.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-gamepad"></i>
+                        <h3>Fun & Innovation</h3>
+                        <p>We solve problems with creativity and enjoy every step of the journey.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-dumbbell"></i>
+                        <h3>Growth Mindset</h3>
+                        <p>We embrace challenges as opportunities to level up our skills.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Performance Excellence</h3>
+                        <p>We write code that's fast, clean, and maintainable.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Rules -->
+            <div class="rules-section">
+                <h3 class="section-subtitle">📋 Team Rules</h3>
+                <div class="rules-grid">
+                    <div class="rule-card">
+                        <div class="rule-number">01</div>
+                        <h4>Code Reviews First</h4>
+                        <p>All code must be reviewed by at least one team member before merging.</p>
+                    </div>
+                    <div class="rule-card">
+                        <div class="rule-number">02</div>
+                        <h4>Daily Standups</h4>
+                        <p>Quick daily check-ins to share progress and blockers.</p>
+                    </div>
+                    <div class="rule-card">
+                        <div class="rule-number">03</div>
+                        <h4>Document Everything</h4>
+                        <p>Clear documentation is as important as working code.</p>
+                    </div>
+                    <div class="rule-card">
+                        <div class="rule-number">04</div>
+                        <h4>Fail Fast, Learn Faster</h4>
+                        <p>Embrace mistakes as learning opportunities.</p>
+                    </div>
+                    <div class="rule-card">
+                        <div class="rule-number">05</div>
+                        <h4>Celebrate Wins</h4>
+                        <p>Big or small, every success deserves recognition.</p>
+                    </div>
+                    <div class="rule-card">
+                        <div class="rule-number">06</div>
+                        <h4>Stay Curious</h4>
+                        <p>Always be learning new technologies and approaches.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Roles -->
+            <div class="roles-section">
+                <h3 class="section-subtitle">🎭 Team Roles</h3>
+                <div class="roles-grid">
+                    <div class="role-card">
+                        <div class="role-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h4>Design Lead</h4>
+                        <p class="role-holder">Harsh Bhatewara</p>
+                        <p class="role-description">Crafts beautiful, intuitive user experiences with pixel-perfect precision.</p>
+                    </div>
+                    <div class="role-card">
+                        <div class="role-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4>Full Stack Developer</h4>
+                        <p class="role-holder">Anand Chunduri</p>
+                        <p class="role-description">Bridges frontend and backend with seamless integration and robust architecture.</p>
+                    </div>
+                    <div class="role-card">
+                        <div class="role-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h4>Backend Architect</h4>
+                        <p class="role-holder">Krish Thakre</p>
+                        <p class="role-description">Builds scalable, high-performance systems that power our applications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="moodboard" class="moodboard">
+        <div class="container">
+            <h2 class="section-title">🎨 Our Inspiration Moodboard</h2>
+            <p class="moodboard-intro">Discover the tools, concepts, and influences that drive our passion for computer science.</p>
+            
+            <div class="moodboard-grid">
+                <!-- Tools & Technologies -->
+                <div class="moodboard-category">
+                    <h3><i class="fas fa-tools"></i> Favorite Tools</h3>
+                    <div class="moodboard-items">
+                        <div class="moodboard-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="moodboard-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="moodboard-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="moodboard-item">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="moodboard-item">
+                            <i class="fab fa-firebase"></i>
+                            <span>Firebase</span>
+                        </div>
+                        <div class="moodboard-item">
+                            <i class="fas fa-database"></i>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Concepts & Principles -->
+                <div class="moodboard-category">
+                    <h3><i class="fas fa-lightbulb"></i> Core Concepts</h3>
+                    <div class="moodboard-items">
+                        <div class="moodboard-item">
+                            <i class="fas fa-cogs"></i>
+                            <span>Clean Code</span>
+                        </div>
+                        <div class="moodboard-item">
+                            <i class="fas fa-rocket"></i>
+                            <span>Performance</span>
+                        </div>
+                        <div class="moodboard-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Security</span>
+                        </div>
+                        <div class="moodboard-item">
+                            <i class="fas fa-users"></i>
+                            <span>User Experience</span>
+                        </div>
+                        <div class="moodboard-item">
+                            <i class="fas fa-sync"></i>
+                            <span>Agile Development</span>
+                        </div>
+                        <div class="moodboard-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Responsive Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Influential Figures -->
+                <div class="moodboard-category">
+                    <h3><i class="fas fa-star"></i> Inspirations</h3>
+                    <div class="moodboard-items">
+                        <div class="moodboard-item">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Tyrese Haliburton</span>
+                        </div>
+                        <div class="moodboard-item">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Linus Torvalds</span>
+                        </div>
+                        <div class="moodboard-item">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Grace Hopper</span>
+                        </div>
+                        <div class="moodboard-item">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Tim Berners-Lee</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resources & Links -->
+                <div class="moodboard-category">
+                    <h3><i class="fas fa-link"></i> Favorite Resources</h3>
+                    <div class="moodboard-links">
+                        <a href="https://github.com/anandc1" target="_blank" class="moodboard-link">
+                            <i class="fab fa-github"></i>
+                            <span>Anand's GitHub</span>
+                        </a>
+                        <a href="https://reactjs.org" target="_blank" class="moodboard-link">
+                            <i class="fab fa-react"></i>
+                            <span>React Docs</span>
+                        </a>
+                        <a href="https://developer.mozilla.org" target="_blank" class="moodboard-link">
+                            <i class="fas fa-book"></i>
+                            <span>MDN Web Docs</span>
+                        </a>
+                        <a href="https://stackoverflow.com" target="_blank" class="moodboard-link">
+                            <i class="fab fa-stack-overflow"></i>
+                            <span>Stack Overflow</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="bios">
+        <div class="container">
+            <h2 class="section-title">Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="bio bio-anand">
+                    <div class="bio-image">
+                        <img src="images/anand.jpg" alt="Anand Chunduri" onerror="this.style.display='none'; this.nextElementSibling.innerHTML='<div style=\'background: var(--gradient); width: 120px; height: 120px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;\'>A</div>'">
+                        <div class="bio-overlay">
+                            <div class="social-links">
+                                <a href="https://github.com/anandc1" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bio-content">
+                        <h3>Anand Chunduri</h3>
+                        <p class="bio-role">Full Stack Developer</p>
+                        <p class="bio-description">The architect of our digital dreams. When I'm not orchestrating code symphonies, you'll find me analyzing NBA stats or conquering virtual worlds. I believe every line of code should tell a story.</p>
+                        <div class="bio-quote">"Code is like basketball - it's all about the fundamentals and the flow."</div>
+                        <div class="skills-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Firebase</span>
+                            <span class="skill-tag">React</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bio bio-harsh">
+                    <div class="bio-image">
+                        <img src="images/harsh.jpg" alt="Harsh Bhatewara" onerror="this.style.display='none'; this.nextElementSibling.innerHTML='<div style=\'background: var(--gradient); width: 120px; height: 120px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;\'>H</div>'">
+                        <div class="bio-overlay">
+                            <div class="social-links">
+                                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bio-content">
+                        <h3>Harsh Bhatewara</h3>
+                        <p class="bio-role">Frontend Developer</p>
+                        <p class="bio-description">The visual storyteller of our team. I transform ideas into pixel-perfect experiences that users love. When I'm not crafting interfaces, I'm either lifting weights or strategizing in virtual battlefields.</p>
+                        <div class="bio-quote">"Design is not just what it looks like, it's how it works."</div>
+                        <div class="skills-tags">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bio bio-krish">
+                    <div class="bio-image">
+                        <img src="images/krish.jpg" alt="Krish Thakre" onerror="this.style.display='none'; this.nextElementSibling.innerHTML='<div style=\'background: var(--gradient); width: 120px; height: 120px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;\'>K</div>'">
+                        <div class="bio-overlay">
+                            <div class="social-links">
+                                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bio-content">
+                        <h3>Krish Thakre</h3>
+                        <p class="bio-role">Backend Developer</p>
+                        <p class="bio-description">The engine room of our digital universe. I build the invisible foundations that make everything work seamlessly. When I'm not optimizing databases, I'm exploring virtual worlds and pushing performance limits.</p>
+                        <div class="bio-quote">"Performance is not an afterthought, it's the foundation."</div>
+                        <div class="skills-tags">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">Express</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Our Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Frontend</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <span class="skill-name">React</span>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-percent="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-percent="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-name">CSS/HTML</span>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-percent="95"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-percent="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-percent="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-name">MongoDB</span>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-percent="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Build Something Amazing Together</h3>
+                    <p>Ready to start your next project? We'd love to hear from you!</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>achundur@charlotte.edu</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(919) 931-4902</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Charlotte, NC</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Team Andrew Haliburton</h3>
+                    <p>Building innovative solutions with passion and precision.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Team Andrew Haliburton. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
