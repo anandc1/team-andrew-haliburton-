@@ -74,6 +74,7 @@ function animateCounter(element) {
         }
         element.textContent = Math.floor(current);
     }, 16);
+
 }
 
 // Intersection Observer for Animations
